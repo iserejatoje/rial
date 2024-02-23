@@ -50,7 +50,7 @@ function initMap() {
 
 if (document.getElementById('map')) {
     if (document.querySelector('[data-lazy]')) {
-        setTimeout(initMap, 500)
+        setTimeout(initMap, 800)
     }
 
     window.addEventListener('scroll', () => {
