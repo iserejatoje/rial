@@ -19,6 +19,10 @@ function elementInViewport(el) {
 }
 
 function initMap() {
+    if (window.yandexMapDidInit) {
+        return false
+    }
+    window.yandexMapDidInit = true
     if (elementInViewport(document.getElementById('map')) && !mapInit) {
         mapInit = true
         let script = document.createElement("script")
@@ -39,7 +43,7 @@ function initMap() {
                 geoCenter = [
                     geoCenter[0],
                     geoCenter[1] - 0.0130
-                ];
+                ]
 
                 map.setCenter(geoCenter)
                 let placemark = new ymaps.Placemark([55.721194, 37.755401], {
@@ -58,11 +62,14 @@ function initMap() {
 }
 
 if (document.getElementById('map')) {
-    if (document.querySelector('[data-lazy]')) {
-        setTimeout(initMap, 1600)
-    }
+    setTimeout(initMap, 1400)
 
-    window.addEventListener('scroll', () => {
+    document.addEventListener('scroll', initYandexMapOnEvent)
+    document.addEventListener('mousemove', initYandexMapOnEvent)
+    document.addEventListener('touchstart', initYandexMapOnEvent)
+
+    function initYandexMapOnEvent (e) {
         initMap()
-    })
+        e.currentTarget.removeEventListener(e.type, initYandexMapOnEvent)
+    }
 }
