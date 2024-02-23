@@ -32,7 +32,16 @@ function initMap() {
                     zoom: 14,
                     controls: ['zoomControl']
                 }, {})
+                let mapCenter = map.getGlobalPixelCenter([55.721194, 37.755401])
                 map.behaviors.disable('scrollZoom')
+                let geoCenter = map.options.get('projection').fromGlobalPixels(mapCenter, map.getZoom())
+
+                geoCenter = [
+                    geoCenter[0],
+                    geoCenter[1] - 0.0130
+                ];
+
+                map.setCenter(geoCenter)
                 let placemark = new ymaps.Placemark([55.721194, 37.755401], {
                     balloonContentHeader: 'Риал Лидер',
                     balloonContentBody: 'Москва, ул.Стахановская, 19'
@@ -50,7 +59,7 @@ function initMap() {
 
 if (document.getElementById('map')) {
     if (document.querySelector('[data-lazy]')) {
-        setTimeout(initMap, 1600)
+        setTimeout(initMap, 1400)
     }
 
     window.addEventListener('scroll', () => {
