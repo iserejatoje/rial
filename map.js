@@ -62,7 +62,7 @@ function initMap() {
 }
 
 if (document.getElementById('map')) {
-    setTimeout(initMap, 1400)
+    setTimeout(initMap, 1500)
 
     document.addEventListener('scroll', initYandexMapOnEvent)
     document.addEventListener('mousemove', initYandexMapOnEvent)
