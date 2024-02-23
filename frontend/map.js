@@ -49,6 +49,10 @@ function initMap() {
 }
 
 if (document.getElementById('map')) {
+    if (document.querySelector('[data-lazy]')) {
+        setTimeout(initMap, 1600)
+    }
+
     window.addEventListener('scroll', () => {
         initMap()
     })
