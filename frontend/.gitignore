@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-sass
+sass/_global.sass
 sass/*
 svg
 node_modules
