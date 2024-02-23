@@ -1,14 +1,90 @@
 @import "variables"
 
+*,
+*:after,
+*:before
+  box-sizing: border-box
+
+.extra-bold
+  font-weight: 800
+
 body
   font-family: 'Montserrat', sans-serif
   font-size: 16px
   background: $silver
 
+.map-wrapper
+  position: relative
+
+  .heading-large
+    margin-top: 20px
+    margin-bottom: 30px
+
+  .map-panel
+    background: $white
+    padding: 45px
+    max-width: 650px
+    width: 100%
+    min-height: 510px
+    pointer-events: all
+
+  .container
+    position: absolute
+    pointer-events: none
+    left: 0
+    right: 0
+    top: 40px
+    bottom: 40px
+    z-index: 10
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+#map
+  width: 100%
+  height: 610px
+
 header
-  min-height: 90px
+  height: 90px
   padding-top: 15px
   padding-bottom: 15px
+  border-bottom: 1px solid rgba(0, 0, 0, .1)
+
+  .email,
+  .lang
+    text-decoration: none
+    font-size: 14px
+    color: rgba(0, 0, 0, 0.5)
+    transition: color 100ms ease-in-out
+
+    &.active
+      color: $black
+      font-weight: 500
+      position: relative
+
+      &:after
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        bottom: -3px
+        background: $black
+        height: 1px
+
+    &:hover
+      color: $black
+
+  .phone
+    font-weight: 800
+    color: $black
+    text-decoration: none
+    transition: color 100ms ease-in-out
+
+    &:hover
+      color: $navy
+
+  .search-input
+    width: 100%
 
   .columns
     display: flex
@@ -18,8 +94,21 @@ header
   .column
     display: flex
 
+    &:nth-child(2)
+      max-width: 644px
+      width: 100%
+
+    &:last-child
+      padding: 0 25px
+      gap: 30px
+      min-height: 48px
+      flex: 1
+      align-items: center
+      border: 1px solid rgba(0, 0, 0, 0.1)
+
 .search
   display: flex
+  width: 100%
 
   input
     padding: 0 30px
@@ -49,6 +138,7 @@ button
 
 .burger
   border: none
+  flex-shrink: 0
   display: flex
   justify-content: center
   width: 127px
@@ -86,5 +176,50 @@ button
         width: 20px
 
 .search-button
-  background: transparent
+  background: $white
   border: none
+  padding: 0 30px
+  display: flex
+  align-items: center
+
+  &:hover
+    svg
+      opacity: 0.7
+
+  svg
+    transition: opacity 100ms ease-in-out
+    opacity: .5
+
+.page-content
+  margin-top: 40px
+
+.breadcrumbs
+  font-size: 12px
+  font-weight: 500
+  line-height: 200%
+
+  .link
+    text-decoration: none
+    color: rgba(0, 0, 0, .5)
+
+  .divider
+    color: rgba(0, 0, 0, .5)
+
+.heading
+  &-large
+    font-size: 45px
+    line-height: 130%
+
+  &-contact
+    h1
+      margin-top: 40px
+      margin-bottom: 40px
+
+h1
+  font-size: 30px
+  font-weight: 800
+  line-height: 130%
+
+footer
+  min-height: 560px
+  background: $navy
