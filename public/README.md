@@ -1,6 +1,6 @@
 # Риал Лидер
 
-- [Контакты](https://rial-9wg.pages.dev/contacts.html)
+- [Контакты](https://iserejatoje.github.io/rial/contacts.html)
 
 
 Made with ❤️
