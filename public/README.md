@@ -6,5 +6,6 @@
 - [Товар](https://iserejatoje.github.io/rial/product.html)
 - [Категория](https://iserejatoje.github.io/rial/category.html)
 - [Новости](https://iserejatoje.github.io/rial/news.html)
+- [Услуга](https://iserejatoje.github.io/rial/service.html)
 
 Made with ❤️
