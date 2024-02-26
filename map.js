@@ -1,5 +1,3 @@
-let mapInit = false
-
 function elementInViewport(el) {
     let top = el.offsetTop
     let left = el.offsetLeft
@@ -22,9 +20,8 @@ function initMap() {
     if (window.yandexMapDidInit) {
         return false
     }
-    window.yandexMapDidInit = true
-    if (elementInViewport(document.getElementById('map')) && !mapInit) {
-        mapInit = true
+    if (elementInViewport(document.getElementById('map'))) {
+        window.yandexMapDidInit = true
         let script = document.createElement("script")
         script.src = "https://api-maps.yandex.ru/2.1/?load=package.standard&apikey=f44f9a2d-2cef-4d09-a399-6ea9b5cedf55&lang=ru-RU"
         document.getElementsByTagName('body')[0].appendChild(script)
@@ -70,6 +67,5 @@ if (document.getElementById('map')) {
 
     function initYandexMapOnEvent (e) {
         initMap()
-        e.currentTarget.removeEventListener(e.type, initYandexMapOnEvent)
     }
 }
