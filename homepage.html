@@ -7,7 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Риал Лидер">
-    <title>Контакты</title>
+    <title>Главная</title>
 </head>
 <body>
 <div class="app">
@@ -55,17 +55,59 @@
         </header>
 
         <div class="page-content">
-            <div class="container">
-                <div class="breadcrumbs">
-                    <a href="#" class="link">Главная</a>
-                    <span class="divider">—</span>
-                    <span>Контакты</span>
-                </div>
 
-                <div class="heading heading-default">
-                    <h1>Контакты</h1>
+            <div class="page-top about-page" style="background: #001643;">
+                <div class="container">
+                    <img class="about-element" src="img/about-element.png" alt="" width="697" height="586" decoding="async">
+                    <svg width="1201" height="849" viewBox="0 0 1201 849" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1000.07 718.961L1098.25 643.35C1132.5 618.254 1166.75 593.159 1200.67 568.39C1200.67 433.788 1200.67 299.187 1200.67 164.585C1149.14 200.762 1097.93 236.938 1046.39 272.788L894.389 380.991V614.995V849H946.252L1000.4 848.674L1000.07 718.961ZM1046.06 404.131L998.441 438.677V512.333C998.441 552.746 999.094 585.337 1000.07 585.012C1001.05 584.686 1022.91 567.738 1048.67 547.858L1095.64 511.355V440.307C1095.64 401.197 1095.32 369.258 1094.66 369.584C1094.01 369.584 1072.16 385.228 1046.06 404.131ZM761.307 848.674H814.149H866.99V625.099C866.99 501.904 865.686 401.523 864.381 401.523C863.076 401.523 555.161 620.21 555.161 620.21L241.7 849L326.834 848.674H418.817L759.677 604.566L761.307 848.674ZM1200.35 0L0 848.674H87.4166H178.095L689.548 489.194L1201 129.713L1200.35 0Z" fill="url(#paint0_linear_504_3097)" fill-opacity="0.5" style="mix-blend-mode:soft-light"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_504_3097" x1="601" y1="111.5" x2="600.5" y2="849" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" stop-opacity="0"/>
+                                <stop offset="0.26" stop-color="white"/>
+                                <stop offset="0.775" stop-color="white"/>
+                                <stop offset="1" stop-color="white" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <div class="breadcrumbs white">
+                        <a href="#" class="link">Главная</a>
+                        <span class="divider">—</span>
+                        <span>О компании</span>
+                    </div>
+
+                    <div class="heading heading-line">
+                        <h1>О компании</h1>
+                    </div>
+
+                    <div class="page-description about-description">
+                        <p>Поддержки бизнеса» обсудили основные вопросы в части реформирования системы государственного заказа. В частности глава ФАС России Максим Шаскольский рассказал о злоупотреблениях</p>
+
+                        <p>Региональных госзаказчиков возможностями закупаться у единственных поставщиков по контрсанкционному 46-ФЗ от 8 марта 2022 года — ранее об этом говорили в Федеральном казначействе.</p>
+                    </div>
+
+                    <div class="about-grid">
+                        <div class="cell">
+                            <div class="number">>500</div>
+                            <div class="title">штампов изготовлено на наших производственных мощностях</div>
+                        </div>
+                        <div class="cell">
+                            <div class="number">>300</div>
+                            <div class="title">б/у станков восстановлено и поставлено на производства РФ</div>
+                        </div>
+                        <div class="cell">
+                            <div class="number">>1000</div>
+                            <div class="title">новых станков поставлено нашем клиентам</div>
+                        </div>
+                        <div class="cell">
+                            <div class="number">3 <span>года</span></div>
+                            <div class="title">на рынке производства металлопроката и продажи оборудования</div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
 
             <div class="map-wrapper">
                 <div class="container">
@@ -79,17 +121,14 @@
                             <a href="mailto:m.rasuev.s@mail.ru" class="email">m.rasuev.s@mail.ru</a>
                         </div>
                         <button class="button button--black">Задать вопрос</button>
-                        <div class="map-text">
-                            <p>ИНН: 0721008133, КПП: 072601001, ОГРН: 1040700209362</p>
-                            <p>Юридический адрес: 360024, Кабардино-Балкарская Республика, город Нальчик, Промышленный проезд 1-й ул., д.5</p>
-                        </div>
                     </div>
                 </div>
                 <div id="map" data-lazy="true" data-pin="svg/pin.svg"></div>
             </div>
+
         </div>
     </div>
-    <footer>
+    <footer class="footer-separator">
         <div class="container">
             <div class="menu">
                 <ul class="column">
@@ -181,7 +220,7 @@
 
                 <div class="column">
                     <a href="tel:89302030303" aria-label="Позвонить нам">
-                        <img src="/svg/phone.svg" alt="" width="27" height="28" decoding="async">
+                        <img src="svg/phone.svg" alt="" width="27" height="28" decoding="async">
                     </a>
                 </div>
             </div>
